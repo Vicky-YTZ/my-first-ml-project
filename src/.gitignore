@@ -1,0 +1,18 @@
+# 创建空文件
+New-Item .gitignore -ItemType File
+
+# 或者直接写入内容
+@"
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.vscode/
+.idea/
+"@ | Out-File -FilePath .gitignore -Encoding utf8
